@@ -1,1 +1,1 @@
-# projekt_wdro-eniowy
+# WheatherApp
