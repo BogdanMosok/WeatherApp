@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+      File: index.html
+      Role: Main application layout, sidebar navigation, metric containers, 
+            and script links for the WeatherApp dashboard.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">⛅</span>
+                <h1>WeatherApp</h1>
+            </div>
+
+            <form id="search-form" class="search-box">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Search city (e.g. Tokyo)..." 
+                    autocomplete="off"
+                >
+                <button type="submit" aria-label="Search">Go</button>
+            </form>
+            <p id="search-error" class="error-msg hidden">City not found in mock database.</p>
+
+            <div class="sidebar-section">
+                <p class="section-label">Saved Locations</p>
+                <ul id="city-list" class="city-nav-list">
+                    <!-- Populated dynamically by uiUpdater.js -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h2 id="city-name">Loading...</h2>
+                    <p id="city-region" class="subtitle">--</p>
+                </div>
+                <div class="header-meta">
+                    <span id="current-date" class="date-badge">--</span>
+                </div>
+            </header>
+
+            <!-- Primary Weather & Core Metrics Grid -->
+            <section class="overview-grid">
+                <!-- Hero Current Temperature Card -->
+                <div class="card hero-card">
+                    <div class="hero-left">
+                        <span class="card-label">Current Weather</span>
+                        <div class="temp-display">
+                            <span id="current-temp">--</span><span class="temp-unit">°C</span>
+                        </div>
+                        <p id="weather-condition" class="condition-text">--</p>
+                        <p id="feels-like" class="meta-text">Feels like --°C</p>
+                    </div>
+                    <div class="hero-right">
+                        <div id="weather-icon" class="large-weather-icon">☀️</div>
+                    </div>
+                </div>
+
+                <!-- Humidity Card -->
+                <div class="card metric-card">
+                    <div class="metric-header">
+                        <span class="card-label">Humidity</span>
+                        <span class="metric-icon">💧</span>
+                    </div>
+                    <div class="metric-body">
+                        <span id="humidity-val" class="metric-value">--%</span>
+                        <div class="progress-track">
+                            <div id="humidity-bar" class="progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <p id="humidity-status" class="meta-text">--</p>
+                    </div>
+                </div>
+
+                <!-- Wind Speed Card -->
+                <div class="card metric-card">
+                    <div class="metric-header">
+                        <span class="card-label">Wind Speed</span>
+                        <span class="metric-icon">🌬️</span>
+                    </div>
+                    <div class="metric-body">
+                        <span id="wind-val" class="metric-value">-- km/h</span>
+                        <p id="wind-dir" class="meta-text">Direction: --</p>
+                        <p id="pressure-val" class="meta-text">Pressure: -- hPa</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forecast Widgets Section (Populated by forecastWidget.js) -->
+            <section class="forecast-grid">
+                <!-- Hourly Forecast Card -->
+                <div class="card forecast-card">
+                    <div class="card-header">
+                        <h3>Hourly Temperature</h3>
+                        <span class="subtitle">Next 24 Hours</span>
+                    </div>
+                    <div id="hourly-forecast-container" class="hourly-bars-wrapper">
+                        <!-- Rendered by forecastWidget.js -->
+                    </div>
+                </div>
+
+                <!-- 5-Day Forecast Card -->
+                <div class="card forecast-card">
+                    <div class="card-header">
+                        <h3>5-Day Forecast</h3>
+                        <span class="subtitle">Daily Low / High Range</span>
+                    </div>
+                    <div id="daily-forecast-container" class="daily-list-wrapper">
+                        <!-- Rendered by forecastWidget.js -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Application Scripts loaded in dependency order -->
+    <script src="apiManager.js"></script>
+    <script src="forecastWidget.js"></script>
+    <script src="uiUpdater.js"></script>
+</body>
+</html>
