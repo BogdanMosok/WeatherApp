@@ -39,7 +39,7 @@ Skład zespołu i podział obowiązków
 [Arsen Khudyk] – widżet prognozy pogody (forecastWidget.js).
 
 Zarządzanie projektem
-Tablica zadań zespołu w Trello: Link do tablicy Trello
+Tablica zadań zespołu w Trello: https://trello.com/invite/b/6afe0008e4af7ba487f1245b/ATTI8e217015c3a5a3330e456d677b975810B55265E3/my-trello-board
 
 ## 6. Status projektu
 
