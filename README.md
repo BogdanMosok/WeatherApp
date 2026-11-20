@@ -31,11 +31,15 @@ Instrukcja uruchomienia zostanie uzupełniona po przygotowaniu kodu źródłoweg
 
 ## 5. Struktura zespołu
 
-- Project Manager: do uzupełnienia
-- Członek zespołu 2: do uzupełnienia
-- Członek zespołu 3: do uzupełnienia
-- Członek zespołu 4: do uzupełnienia
-- Członek zespołu 5: do uzupełnienia
+Skład zespołu i podział obowiązków
+[Daniil Mylenko] (Kierownik projektu) – konfiguracja repozytorium, tablica Trello, struktura HTML (index.html), Code Review i Merge PR.
+[Vladyslav Tyminskyi] – stylowanie interfejsu dashboardu (styles.css).
+[Yehor Storchylo] – moduł danych pogodowych (apiManager.js).
+[Bogdan Moskovchenko] – logika aktualizacji interfejsu (uiUpdater.js).
+[Arsen Khudyk] – widżet prognozy pogody (forecastWidget.js).
+
+Zarządzanie projektem
+Tablica zadań zespołu w Trello: Link do tablicy Trello
 
 ## 6. Status projektu
 
