@@ -1,0 +1,28 @@
+# WeatherApp
+
+## 1. Opis projektu
+
+WeatherApp to aplikacja pogodowa umożliwiająca
+sprawdzanie informacji o pogodzie w wybranej lokalizacji.
+
+Projekt realizowany jest zespołowo w ramach przedmiotu
+Zarządzanie projektem wdrożeniowym.
+
+## 2. Technologie
+
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub
+- Trello
+
+## 3. Moja rola w projekcie
+
+Członek zespołu 4.
+
+Odpowiedzialność:
+- Implementacja modułu `uiUpdater.js`.
+- Aktualizacja interfejsu użytkownika.
+- Wyświetlanie danych pogodowych.
+- Obsługa wyszukiwania miasta.
